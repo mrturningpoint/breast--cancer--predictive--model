@@ -5,7 +5,7 @@ import pickle as pickl
 import plotly.graph_objects as go
 
 def clean_data():
-      data=pd.read_csv("data/breast-cancer.csv")
+      data=pd.read_csv("dataset/breast-cancer.csv")
       data =data.drop('id',axis=1)
       data['diagnosis']=data['diagnosis'].map({'B':0,'M':1})
     
@@ -144,7 +144,7 @@ def main():
         layout="wide",initial_sidebar_state="expanded"
 
     )
-    with open("additional_style/style.css") as f:
+    with open("additonal_style/style.css") as f:
        st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
     input_data=add_sidebar()
     

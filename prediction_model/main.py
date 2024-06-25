@@ -30,7 +30,7 @@ def create_model(data):
 
 
 def clean_data():
-      data=pd.read_csv("data/breast-cancer.csv")
+      data=pd.read_csv("dataset/breast-cancer.csv")
       data =data.drop('id',axis=1)
       data['diagnosis']=data['diagnosis'].map({'B':0,'M':1})
     
