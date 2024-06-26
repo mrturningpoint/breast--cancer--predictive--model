@@ -124,8 +124,8 @@ def add_sidebar():
          )
     return input_dict    
 def add_prediction(input_data) :
-    model=pickl.load(open("model/model.pkl","rb"))
-    scalar=pickl.load(open("model/scalar.pkl","rb"))
+    model=pickl.load(open("prediction_model/model.pkl","rb"))
+    scalar=pickl.load(open("prediction_model/scalar.pkl","rb"))
     input_array =np.array(list(input_data.values())).reshape(1,-1)#this is for getting a 2d array
     scaled_array=scalar.transform( input_array)
     prediction=model.predict(scaled_array)
