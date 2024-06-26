@@ -144,7 +144,7 @@ def main():
         layout="wide",initial_sidebar_state="expanded"
 
     )
-    with open("additonal_style/style.css") as f:
+    with open("additonal_Style/style.css") as f:
        st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
     input_data=add_sidebar()
     
